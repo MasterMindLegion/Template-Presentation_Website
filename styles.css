@@ -1,0 +1,96 @@
+/* Variables */
+:root {
+  --page-1-color: steelblue;
+  --page-2-color: tan;
+  --page-3-color: teal;
+  --page-4-color: slateblue;
+  --body-color: #fff;
+  --btn-back: #f4f4f4;
+  --btn-font: #333;
+  --btn-hover: #333;
+  --btn-hover-font: #fff;
+  --animation-speed: 1.5s;
+}
+/* Styles */
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.4;
+  color: var(--body-color);
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+#page-1 {
+  background: var(--page-1-color);
+}
+#page-2 {
+  background: var(--page-2-color);
+}
+#page-3 {
+  background: var(--page-3-color);
+}
+#page-4 {
+  background: var(--page-4-color);
+}
+.page {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 4rem;
+}
+.page h1 {
+  font-size: 4rem;
+  /* Why it stacks */
+  line-height: 1.2rem;
+  margin: 1.5rem;
+  padding: 2rem;
+}
+.page p {
+  font-size: 1.3rem;
+}
+.btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  /* border-radius: 50%; */
+  background: var(--btn-back);
+  color: var(--btn-font);
+  text-decoration: none;
+  border: none;
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  transition: all 0.3s ease-in;
+}
+.btn:hover,
+.btn-dark {
+  background: var(--btn-hover);
+  color: var(--btn-hover-font);
+}
+.btn-dark:hover {
+  background: var(--btn-hover-font);
+  color: var(--btn-hover);ß
+}
+/* Page Animation  */
+#page-1 h1 {
+  transform: translateY(-1200px);
+  animation: heading var(--animation-speed) forwards ease-in;
+}
+@keyframes heading {
+  to {
+    transform: translateY(0);
+  }
+}
+#page-1 p {
+  transform: translateX(-1800px);
+  animation: par var(--animation-speed) forwards ease-in 2s;
+}
+@keyframes par {
+  to {
+    transform: translateX(0);
+  }
+}
